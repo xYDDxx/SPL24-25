@@ -1,34 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import Card from './components/Card';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="bg-black text-red-600 min-h-screen p-8 flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-8">HTL Dornbirn 5bWI 4EVER!</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-8xl">
+        <Card
+          image="https://picsum.photos/300/200?random=1"
+          name="Riedmann Andres"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=2"
+          name="Morit"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=3"
+          name="Kronabeiter"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=4"
+          name="Luggi"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=5"
+          name="Jan Fehler"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=6"
+          name="Noel Fielmann"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=7"
+          name="Diego Knechtner"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
+        <Card
+          image="https://picsum.photos/300/200?random=8"
+          name="Ronny Oppman"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac volutpat leo. Etiam ac nunc eget ligula dapibus."
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
