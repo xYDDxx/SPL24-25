@@ -5,7 +5,7 @@ type Person = {
   id?: number;
   firstname: string;
   lastname: string;
-  image: string;
+  image: string; // Enthält die ID des Bildes
   birthday: string;
 };
 
