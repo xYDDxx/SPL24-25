@@ -5,7 +5,7 @@ type Person = {
   id?: number;
   firstname: string;
   lastname: string;
-  image: string; // Enthält die ID des Bildes
+  image: string;
   birthday: string;
 };
 
@@ -13,11 +13,13 @@ export default function CardContainer() {
   const [people, setPeople] = useState<Person[]>([]);
 
   useEffect(() => {
-    fetch("http://10.115.1.35:8055/items/people").then((response) =>
-      response.json().then((data: any) => {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    fetch(`${apiUrl}/items/people`)
+      .then((response) => response.json())
+      .then((data: any) => {
         setPeople(data.data);
       })
-    );
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const formatDate = (dateString: string) => {
